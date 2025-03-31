@@ -1,0 +1,314 @@
+/* IDentidade Visual do projeto
+ * 
+ * #294c71 - azul marinho
+ * #de003e - Vermelho
+ * #ffffff - branco
+ * #000000 - preto
+ * #a1a1a1 - cinza
+ *  
+ * Vamos definir as cores acima com variáveis, para que se o cliente solicite alguma alteração,
+* seja feita com facilitade, alterando apenas as cores no :root{ } 
+ * */
+
+/*FORMATAÇÃO PARA TODOS OS ELEMENTOS */
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    font-size: 12px;
+    background-color: var(--cor-terciaria-branco);
+}
+
+/* DEFININDO VARIÁVEIS GLOBAIS */
+
+:root {
+    --cor-primaria-azul: #294c71;
+    --cor-secundaria-vermelho: #de003e;
+    --cor-terciaria-branco: #ffffff;
+    --cor-quartenaria-preto: #000000;
+    --cor-links-bonina: #9a022c;
+    --cor-links-cinza: #a1a1a1;
+}
+
+header {
+    background: url(Img/fundo.png) var(--cor-primaria-azul) repeat-x bottom left;
+    /* primeiro imagem, depois cor padrão, imagem repetindo apenas na vertical, fixada embaixo a esquerda*/
+    height: 20em;
+    /* tamanho definido em relação ao tamanho da fonte definido no body*/
+    width: 100%;
+}
+
+header img#logo {
+    border: none;
+    margin: 10px 20px;
+}
+
+/*FORMATAÇÃO DO MENU DE NAVEGAÇÃO DO CABEÇALHO */
+
+nav#menuPrincipal {
+    margin: 20px;
+    align-content: center;
+    text-align: left;
+    border: none;
+}
+nav#menuPrincipal a {
+    padding: 13px 20px;
+    margin: -2px;
+    border: none;
+    background: var(--cor-secundaria-vermelho);
+    text-decoration: none;
+    color: var(--cor-terciaria-branco);
+    font-weight: 100;
+    font-size: 1.2em;
+}
+p {
+    font-size: 1em;
+    font-weight: 100;
+    display: inline-block;
+}
+
+nav#menuPrincipal a:hover p {
+    color: var(--cor-links-bonina);
+}
+
+/* MARCAR PAGINA SELECIONADA SEM JAVASCRIPT 
+ * 
+ * A Técnica é simples:
+ * 
+ * Coloque um ID no body de cada pagina de acordo com o seu nome
+ * 
+ * Faça uma seleção aqui de acordo com o ID do body até o ID/Class do link e o modifique
+ * 
+ * */
+
+body.home header #imgMenu #menuPrincipal a#home {
+    background: var(--cor-links-bonina);
+    cursor: text;
+}
+
+#imgMenu {
+    float: left;
+    border: none;
+    position: relative;
+}
+
+.clear {
+    clear: both;
+}
+
+/*CENTRALIZANDO OS ITENS DO CABEÇALHO COM UMA LARGURA FIXA*/
+
+#centralizandoCabecalho {
+    width: 850px;
+    margin: 0 auto; /* O "auto" r   ealiza a centralização*/
+}
+/* SEPARAÇÃO DAS COLUNAS */
+.centralizandoColunas {
+    width: 850px;
+    height: 800px;
+    margin: 0 auto; /* O "auto" r   ealiza a centralização*/
+    /*border: 3px red solid; */
+}
+#primeiraColuna {
+    width: 200px;
+    /*border: 3px red solid; */
+    float: left;
+}
+#segundaColuna,
+#terceiraColuna {
+    width: 300px;
+    height: 500px;
+    /*border: 3px red solid; */
+    float: left;
+}
+#primeiraColuna,
+#segundaColuna {
+    margin-right: 15px;
+}
+/* PRIMEIRA COLUNA FORMATAÇÃO */
+
+.entrevistas {
+    background: url("Img/fundo-caixa.png") repeat;
+    margin: 0 auto;
+}
+
+.separacao {
+    padding: 3%;
+}
+.distancia {
+    padding: 2%;
+}
+
+.entrevistas h1 {
+    background-color: var(--cor-primaria-azul);
+    width: 85%;
+    margin: 0 auto;
+    color: var(--cor-terciaria-branco);
+    padding: 5px;
+}
+
+.corpocard h2 {
+    background-color: var(--cor-secundaria-vermelho);
+    width: 85%;
+    font-size: 1.2em;
+    color: var(--cor-quartenaria-preto);
+    padding: 0px 3px;
+    line-height: 20px;
+    margin: 5px;
+}
+
+.entrevistas ul {
+    text-decoration: none;
+    list-style: none;
+    line-height: 35px;
+    background-color: var(--cor-terciaria-branco);
+    width: 85%;
+    margin: 0 auto;
+}
+.entrevistas a {
+    text-decoration: none;
+    padding: 3%;
+    position: relative;
+    font-size: 1.3em;
+}
+
+.entrevistas a:hover {
+    padding: 3% 25px;
+    background: url(Img/marcador.png) no-repeat left center;
+    align-content: center;
+    color: var(--cor-links-cinza);
+}
+
+.entrevistas input[type="email"] {
+    padding: 5px;
+    font-size: 1.2em;
+    margin: 2px 23px;
+    width: 75%;
+}
+.entrevistas input[type="submit"] {
+    padding: 5px;
+    font-size: 1.4em;
+    margin: 1px 23px;
+    width: 50%;
+    background-color: var(--cor-secundaria-vermelho);
+    color: var(--cor-terciaria-branco);
+    border: 0;
+}
+.entrevistas label {
+    padding: 5px;
+    font-size: 1.6em;
+    margin: 2px 23px;
+}
+
+.entrevistas input[type="submit"]:hover {
+    background-color: var(--cor-links-bonina);
+}
+
+.entrevistas img {
+    width: 95%;
+    margin: 5px;
+}
+
+.entrevistas .corpocard {
+    text-decoration: none;
+    list-style: none;
+    line-height: 35px;
+    background-color: var(--cor-terciaria-branco);
+    width: 85%;
+    margin: 0 auto;
+}
+
+.entrevistas p {
+    line-height: normal;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 5px;
+}
+
+.linkrodape a {
+    text-decoration: underline;
+    color: var(--cor-secundaria-vermelho);
+    padding: 3%;
+    position: relative;
+    font-size: 1.2em;
+    font-weight: normal;
+}
+.linkrodape a:hover {
+    text-decoration: underline;
+    color: blue;
+    background: none;
+    padding: 3%;
+    position: relative;
+    font-size: 1.2em;
+    font-weight: normal;
+}
+
+/*MUNDO - 2 E 3 COLUNA INFERIOR */
+.mundo {
+    background: url("Img/fundo-caixa.png") repeat;
+    margin: 0 auto;
+}
+
+.mundo h1 {
+    background-color: var(--cor-primaria-azul);
+    width: 85%;
+    margin: 0 auto;
+    color: var(--cor-terciaria-branco);
+    padding: 5px;
+}
+
+.mundo img {
+    width: 95%;
+    margin: 3px;
+}
+.mundo p {
+    line-height: normal;
+    font-size: 1em;
+    margin: 5px;
+    float: right;
+}
+.mundo .corpocard {
+    text-decoration: none;
+    background-color: var(--cor-terciaria-branco);
+    width: 85%;
+    margin: 0 auto;
+}
+.mundo .corpocardIMG {
+    text-decoration: none;
+    background-color: var(--cor-terciaria-branco);
+    width: 32%;
+    float: left;
+}
+.mundo .corpocardTXT {
+    text-decoration: none;
+    background-color: var(--cor-terciaria-branco);
+    width: 65%;
+    float: left;
+}
+.corpocardTXT h1 {
+    background: none;
+    color: #87cefa;
+    font-size: 1em;
+    margin: 2px 0px;
+}
+
+/*RODAPE */
+
+#rodape {
+   padding: 20px;
+    background-color: var(--cor-primaria-azul);
+}
+
+.centralizandorodape {
+    width: 850px;
+    margin: 0 auto; /* O "auto" r   ealiza a centralização*/
+    font-size: 1.3em;
+    text-align: center;
+    align-content: center;
+}
+.centralizandorodape p {
+    color: var(--cor-terciaria-branco);
+}
